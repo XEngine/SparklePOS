@@ -1,0 +1,31 @@
+
+<?php \Laravel\Section::start('title'); ?>
+	Masalar
+<?php \Laravel\Section::stop(); ?>
+<?php \Laravel\Section::start('content'); ?>
+    <div class="col">
+    <!--MASALARRRRRRRRRRRRRRRRRRRRR-->
+    <div class="wrapper-md">
+      <!-- users -->
+      <div class="row">
+     		<?php foreach($tables as $table): ?>
+     			<?php $active = $table->table_active ? 'btn-danger' : 'btn-primary'; ?>
+     		    <div class="col-md-4">
+		          <div class="panel bg-gd panel-default">
+
+		            <div class="panel-heading wrapper b-b b-light">
+		              <h5 class="font-thin m-t-none m-b-none text-muted"><?php echo $table->table_name; ?></h5>              
+		            </div>
+		            <div class="panel-footer">
+		              <a href="<?php echo URL::base(); ?>/table/<?php echo $table->table_slug; ?>" class="btn <?php echo $active; ?> btn-addon btn-sm"><i class="fa fa-plus"></i><?php if($table->table_active): ?> Masaya Git <?php else: ?> Masa Aç <?php endif; ?></a>
+		            </div>
+		          </div>
+		        </div>
+			<?php endforeach; ?>
+      </div>
+
+      <!-- / users -->
+    </div>
+  </div>
+<?php \Laravel\Section::stop(); ?>
+<?php echo view('layout.skeleton')->with(get_defined_vars())->render(); ?>

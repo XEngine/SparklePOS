@@ -1,0 +1,4 @@
+<?php \Laravel\Section::start('title'); ?>
+Invoices
+<?php \Laravel\Section::stop(); ?>
+<?php echo view('layout.skeleton')->with(get_defined_vars())->render(); ?>
