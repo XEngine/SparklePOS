@@ -3,6 +3,7 @@
 Route::get('/','home@index');
 Route::get('category/(:num?)','category@index');
 Route::get('table/(:all?)','invoice@index');
+Route::post('processAjaxCall','DoAjax@eatables');
 
 
 Event::listen('404', function()

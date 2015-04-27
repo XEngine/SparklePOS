@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="<?php echo URL::base(); ?>/css/font.css" type="text/css" />
   <link rel="stylesheet" href="<?php echo URL::base(); ?>/css/app.css" type="text/css" />
 
+
 </head>
 <body>
 <div class="app app-header-fixed  app-aside-dock ">
@@ -30,6 +31,6 @@
 
 <script src="<?php echo URL::base(); ?>/js/jquery.min.js"></script>
 <script src="<?php echo URL::base(); ?>/js/bootstrap.min.js"></script>
-
+<script src="<?php echo URL::base(); ?>/js/core.js"></script>
 </body>
 </html>

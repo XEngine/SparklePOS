@@ -1,0 +1,33 @@
+<?php if($iscat): ?>
+<?php foreach($categories as $cat): ?>
+<div class="col-xs-4" id="eatables" data-catid="<?php echo $cat->id; ?>">
+  <div class="panel b-a">
+    <div class="panel-heading no-border bg-primary">          
+      <span class="text-lt"><?php echo $cat->getDescriptions->name; ?></span>
+    </div>
+    <div class="item m-l-n-xxs m-r-n-xxs">
+      <div class="bottom wrapper bg-gd-dk text-white">            
+        <div class="text-u-c h3 m-b-sm text-info-lter"><?php echo $cat->getDescriptions->name; ?></div>
+      </div>
+      <img src="<?php echo URL::base(); ?>/<?php echo $cat->getDescriptions->image; ?>" class="img-full">
+    </div>
+  </div>
+</div>
+<?php endforeach; ?>
+<?php else: ?>
+<?php foreach($products as $product): ?>
+<div class="col-xs-4" id="eatables" data-catid="<?php echo $product->id; ?>">
+  <div class="panel b-a">
+    <div class="panel-heading no-border bg-primary">          
+      <span class="text-lt"><?php echo $product->product; ?></span>
+    </div>
+    <div class="item m-l-n-xxs m-r-n-xxs">
+      <div class="bottom wrapper bg-gd-dk text-white">            
+        <div class="text-u-c h3 m-b-sm text-info-lter"><?php echo $product->price; ?></div>
+      </div>
+      <img src="<?php echo URL::base(); ?>/<?php echo $product->image; ?>" class="img-full">
+    </div>
+  </div>
+</div>
+<?php endforeach; ?>
+<?php endif; ?>
