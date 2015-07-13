@@ -16,3 +16,4 @@ SparklePOS is clean and basic system for any other POS systems around. It also f
 ## License
 
 SparklePOS is open-sourced software licensed under the MIT License.
+Şekil Şekil yazdıkta, bu daha bildiğin düz L3
